@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel API Test Page</title>
+    <link rel="stylesheet" href="css/test.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            function success() {
+                var response = JSON.stringify(arguments[0], null, "\t");
+                $('.output').removeClass('error').addClass('success').text(response);
+            }
+            function error() {
+                var response = JSON.stringify(arguments[0], null, "\t");
+                $('.output').removeClass('success').addClass('error').text(response);
+            }
+            $("#btnClear").click(function () {
+                $("#txtUrl").val("");
+                $('.output').text('');
+            });
+            $("#btnSubmit").click(function () {
+                var url = $('#txtUrl').val();
+
+                $('.output').text('');
+                $.ajax({
+                    url: url,
+                    error: error,
+                    success: success
+
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>Pixel API Test Page</h1>
+<table>
+    <tr>
+        <td>URL</td>
+        <td>
+            <input type="text" id="txtUrl" value="http://localhost:8081/api/v1/pixel?eventDate=" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="button" id="btnSubmit" value="Submit" />
+            <input type="button" id="btnClear" value="Clear" />
+        </td>
+    </tr>
+</table>
+
+<div class="output">
+</div>
+</body>
+</html>

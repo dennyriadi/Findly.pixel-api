@@ -1,0 +1,48 @@
+{
+  "name": "Findly.pixel-api",
+  "description": "Pixel API",
+  "version": "0.1.0",
+  "homepage": "https://github.com/denny/Findly.pixel-api",
+  "author": {
+    "name": "Denny Riadi",
+    "email": "denny.riadi@findly.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/denny/Findly.pixel-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/denny/Findly.pixel-api/issues"
+  },
+  "licenses": [
+    {
+      "type": "Findly",
+      "url": "https://github.com/denny/Findly.pixel-api/blob/master/LICENSE-Findly"
+    }
+  ],
+  "main": "gulpfile.js",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "dependencies": {
+    "bunyan": "^1.4.0",
+    "lodash": "^3.9.3",
+    "logentries-stream": "^1.0.0",
+    "mysql": "^2.9.0",
+    "newrelic": "^1.20.2",
+    "restify": "^3.0.3",
+    "sequelize": "^3.9.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.0",
+    "gulp-nodemon": "^2.0.3",
+    "gulp-spawn-mocha": "^2.2.1",
+    "jshint-stylish": "^2.0.1",
+    "supertest": "^0.15.0"
+  },
+  "keywords": []
+}

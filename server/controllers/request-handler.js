@@ -23,6 +23,7 @@ function RequestHandler(req, res, next) {
 
       callbacks = {
         error: function(err) {
+          console.error(err);
           return self.next(errorHandler.throwInternalServerError(self.req, err));
         },
         success: function() {

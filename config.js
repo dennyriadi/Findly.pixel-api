@@ -13,6 +13,5 @@ module.exports = {
     'username': 'guest',
     'password': 'Monday99',
     'name': 'qa1-dmp'
-    //'name': 'uat-dmp'
   }
 };

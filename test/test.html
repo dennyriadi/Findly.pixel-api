@@ -20,6 +20,7 @@
             });
             $("#btnSubmit").click(function () {
                 var url = $('#txtUrl').val();
+		url += '&_t=' + +new Date();
 
                 $('.output').text('');
                 $.ajax({
